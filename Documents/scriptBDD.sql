@@ -26,8 +26,8 @@ CREATE TABLE GROUPE(
 idGroupe    Int NOT NULL ,
 nom         Varchar (50) NOT NULL ,
 promotion   Varchar (50) NOT NULL ,
-idPromotion Varchar (50) NOT NULL ,
-nbeleves    Int NOT NULL
+type        Varchar (50) NOT NULL ,
+nbEleves    Int NOT NULL
 ,CONSTRAINT GROUPE_PK PRIMARY KEY (idGroupe)
 )ENGINE=InnoDB;
 
@@ -56,7 +56,6 @@ photo           Varchar (50)  ,
 rue             Varchar (100) ,
 codePostal      Varchar (5)   ,
 ville           Varchar (50) ,
-
 idGroupe        Int
 ,CONSTRAINT UTILISATEUR_PK PRIMARY KEY (matricule)
 
@@ -83,6 +82,7 @@ typeSalle Varchar (50) NOT NULL
 
 CREATE TABLE COURS(
 idCours    Int NOT NULL ,
+nom        Varchar (50) NOT NULL ,
 dateDebut  Datetime NOT NULL ,
 dateFin    Datetime NOT NULL ,
 idSalle    Int NOT NULL ,
